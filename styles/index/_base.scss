@@ -1,0 +1,86 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: Source Sans Pro, sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: $grey-800;
+  font-family: Source Sans Pro, sans-serif;
+  line-height: 1.5;
+  max-width: 100%;
+  overflow-x: hidden;
+  cursor: default;
+
+  a {
+    cursor: pointer !important;
+    text-decoration: none !important;
+    color: inherit;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    line-height: 1.33;
+  }
+}
+
+img {
+  width: 100%;
+}
+
+.container {
+  max-width: 1760px;
+  margin: auto;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.owl-carousel .owl-stage {
+  display: flex;
+}
+
+@include mq_dl() {
+  .section {
+    .heading {
+      @include res-font-size(40, 60);
+      margin: 0 0 1rem;
+    }
+    .sub-heading {
+      @include res-font-size(20, 24);
+      font-weight: 400;
+      margin-top: 0;
+    }
+  }
+}
+
+@include mq_custom(300px, 1224px) {
+  .section {
+    .heading {
+      @include res-font-size(24, 40);
+    }
+    .sub-heading {
+      font-weight: 400;
+    }
+  }
+}
+
+@include mq_custom(300px, 700px) {
+  .container {
+    .heading {
+      font-size: 1.75rem;
+      text-align: left;
+    }
+    .sub-heading {
+      font-size: 1rem;
+      text-align: left;
+    }
+  }
+}

@@ -1,0 +1,54 @@
+.btn--primary {
+	background: white;
+	border: solid 1px $primary-blue;
+	border-radius: 8px;
+	box-shadow: 0 2px 8px 0 rgba(0, 32, 87, 0.24);
+	color: $primary-blue;
+	cursor: pointer;
+	display: inline-block;
+	font-weight: 600;
+	padding: 1rem 1.5rem;
+}
+
+.btn--secondary {
+	background: $primary-blue;
+	border: solid 1px white;
+	border-radius: 8px;
+	box-shadow: 0 2px 8px 0 rgba(0, 32, 87, 0.24);
+	color: white;
+	cursor: pointer;
+	display: inline-block;
+	font-weight: 600;
+	padding: 1rem 1.5rem;
+}
+
+.btn--transparent {
+	border: none;
+	background: none;
+	color: white;
+	cursor: pointer;
+	display: inline-block;
+	font-weight: 600;
+	padding: 1rem 1.5rem;
+}
+
+.btn--yellow {
+	background: $primary-yellow;
+	border: none;
+	border-radius: 0.5rem;
+	box-shadow: 0 4px 8px 0 rgba(0, 69, 191, 0.12);
+	color: #14254b;
+	cursor: pointer;
+	display: inline-block;
+	font-weight: 600;
+	padding: 1rem 1.5rem;
+}
+
+.btn--border-none {
+	border: none;
+}
+
+.btn--center > span {
+	text-align: center;
+	width: 100%;
+}

@@ -1,0 +1,39 @@
+{
+  "name": "content-bundles",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/peppercontent/content-bundles",
+  "devDependencies": {
+    "autoprefixer": "^9.8.2",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-if": "^3.0.0",
+    "gulp-postcss": "^8.0.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^4.1.0",
+    "gulp-sourcemaps": "^2.6.5",
+    "husky": "^4.2.3",
+    "lint-staged": "^10.0.8",
+    "node-sass": "^4.14.1",
+    "prettier": "^1.19.1"
+  },
+  "scripts": {
+    "prettier": "prettier --ignore-path .gitignore \"**/*.+(js|css|html)\"",
+    "check-format": "yarn prettier --list-different",
+    "dev": "gulp sass:watch",
+    "build:css": "gulp sass",
+    "format": "yarn prettier --write",
+    "build": "yarn build:css"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.+(js|css|html)": [
+      "yarn format",
+      "git add"
+    ]
+  }
+}

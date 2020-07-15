@@ -1,0 +1,6 @@
+.vscode/
+.lighthouseci
+.DS_Store
+node_modules/
+/styles/**/*.min.css
+/styles/**/*.map
